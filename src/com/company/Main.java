@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        int c = 0, d= 0;
+        int c , d;
 
         //scanner class to get user input
         Scanner input = new Scanner(System.in);
@@ -29,10 +29,22 @@ public class Main {
         //for loop to go through all the number between c and d and check if the number is prime or not
         for(int i =c ; i <=d ; i++) {
 
-            if( isPrime(i) == true ) {
+            if( isPrime(i)) {
 
                 System.out.print(i  + " ");
             }
+        }
+        System.out.println(" ");
+        int i = c;
+        while(i <= d){
+
+            if(isEven(i)){
+                System.out.println(i+" is even number.");
+            }
+            else {
+                System.out.println(i + " is odd number.");
+
+            }            i++;
         }
 
     }
@@ -53,6 +65,18 @@ public class Main {
 
         return true;
 
+    }
+
+    //odd and even number test
+    public static boolean isEven(int n){
+
+        if(n <= 1){
+            return false;
+        }
+        else if(n %2 !=0){
+            return false;
+        }
+        return true;
     }
 
 }
